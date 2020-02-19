@@ -1,14 +1,14 @@
 package boerderij.veestapel;
 
-/** De class voor geiten, die enkel melk produceren */
-public class Geiten extends AlleDieren implements Melkproducenten {
+/** De class voor schapen, die enkel melk produceren */
+public class Schaap extends Dier implements Melkproducenten {
 
-    public Geiten(double voerKostenPerDag, double verzorgingKostenPerDag) {
+    public Schaap(double voerKostenPerDag, double verzorgingKostenPerDag) {
     }
 
     @Override
     public double opbrengstenMelk(int tijd) {
-        final double productie_liter = 16;
+        final double productie_liter = 10;
         return tijd * productie_liter;
     }
 

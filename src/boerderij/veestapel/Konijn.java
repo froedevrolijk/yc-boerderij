@@ -1,9 +1,9 @@
 package boerderij.veestapel;
 
 /** De class voor konijnen, die enkel vlees produceren */
-public class Konijnen extends AlleDieren implements Vleesproducenten {
+public class Konijn extends Dier implements Vleesproducenten {
 
-    public Konijnen(double voerKostenPerDag, double verzorgingKostenPerDag) {
+    public Konijn(double voerKostenPerDag, double verzorgingKostenPerDag) {
     }
 
     @Override

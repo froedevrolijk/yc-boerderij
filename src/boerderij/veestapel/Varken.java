@@ -1,14 +1,14 @@
 package boerderij.veestapel;
 
-/** De class voor kippen, die enkel vlees produceren */
-public class Kippen extends AlleDieren implements Vleesproducenten {
+/** De class voor varkens, die enkel vlees produceren */
+public class Varken extends Dier implements Vleesproducenten {
 
-    public Kippen(double voerKostenPerDag, double verzorgingKostenPerDag) {
+    public Varken(double voerKostenPerDag, double verzorgingKostenPerDag) {
     }
 
     @Override
     public double opbrengstenVlees(double startgewicht, int tijd) {
-        final double productie_kg = 0.3;
+        final double productie_kg = 0.8;
         return startgewicht + (tijd * productie_kg);
     }
 
