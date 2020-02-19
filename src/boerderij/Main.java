@@ -1,24 +1,35 @@
 package boerderij;
 
+import boerderij.personeel.Boer;
 import boerderij.veestapel.*;
 import markt.Marktprijs;
 
 public class Main {
 
     public static void main(String[] args) {
-        Konijn konijn1 = new Konijn(30, 20);
-        Varken varken1 = new Varken(20, 10);
-        Kip kip1 = new Kip(40, 25);
-        Geit geit1 = new Geit(45, 65);
-        Schaap schaap1 = new Schaap(80, 90);
+        Geit geit = new Geit();
+        Kip kip = new Kip();
+        Konijn konijn = new Konijn();
+        Schaap schaap = new Schaap();
+        Varken varken = new Varken();
 
-        System.out.println(konijn1.opbrengstenVlees(1, 10));
-        System.out.println(varken1.opbrengstenVlees(15, 40));
-        System.out.println(kip1.opbrengstenVlees(3, 12));
-        System.out.println(geit1.opbrengstenMelk(8));
-        System.out.println(schaap1.opbrengstenMelk(9));
+        geit.kosten(4);
+        kip.kosten(3);
+        konijn.kosten(8);
+        schaap.kosten(10);
+        varken.kosten(6);
 
-        Marktprijs m = new Marktprijs();
-        System.out.println(m.berekenMarktprijs());
+        Marktprijs marktprijs = new Marktprijs();
+        System.out.println(marktprijs.berekenMarktprijs());
+
+        geit.opbrengstenMelk(4);
+        kip.opbrengstenVlees(4);
+        konijn.opbrengstenVlees(7);
+        schaap.opbrengstenMelk(5);
+        varken.opbrengstenVlees(12);
+
+        Boer boer = new Boer();
+        boer.doeWerk(6);
+
     }
 }

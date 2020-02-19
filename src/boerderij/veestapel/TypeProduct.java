@@ -1,11 +1,11 @@
 package boerderij.veestapel;
 
 interface Melkproducenten {
-    double opbrengstenMelk(int tijd);
-    double kosten(double voerKostenPerDag, double verzorgingKostenPerDag, int tijd);
+    double opbrengstenMelk(int aantalDagen);
+    double kosten(int aantalDagen);
 }
 
 interface Vleesproducenten {
-    double opbrengstenVlees(double startgewicht, int tijd);
-    double kosten (double voerKostenPerDag, double verzorgingKostenPerDag, int tijd);
+    double opbrengstenVlees(int aantalDagen);
+    double kosten(int aantalDagen);
 }
